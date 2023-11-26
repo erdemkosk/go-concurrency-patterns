@@ -37,7 +37,18 @@ Buffered Channels: These channels have a specific capacity and allow data to be 
 Another example of using channels is done. In this approach, a very long goroutine **can be stopped**. Similar to go context logic, a long goroutine can be used as a **breaker at any time**.
 
 #### Pipeline
+A "pipeline" typically refers to a structure used for data processing, where interconnected stages sequentially process a dataset. It represents a system where each step is dependent on the output of the previous one, often organized through channels.
+
+The operation of this **structure involves the transfer of data from one stage to the next**, with **each stage performing a specific operation on the input data and passing the output** to the subsequent stage. These steps are typically coordinated through channels.
+
+For instance, you can create a "pipeline" to sort a dataset. In the **first stage, the data is sorted**, in the **second stage, the sorted data is processed**, and finally,**the result is obtained in the last stage**. Each stage takes the input, processes it, and forwards it to the next stage through channels.
+
+Even in the presence of parallel processes, each stage receives input from the previous one, processes it, and passes the output to the next stage. This structure allows data to flow sequentially through the stages.
+
+Channels are used to manage the flow of data within this "pipeline" structure. Each stage uses channels to receive data, process it, and pass the results to the subsequent stage. This modular approach makes it easier to maintain and extend data processing operations.
 
 
+## Articles and structures to be analyzed in the future
 
+- [Handling 1 Million Requests per Minute](https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa)
 

@@ -4,4 +4,5 @@ func main() {
 	GoRoutinesExample()
 	SelectExample()
 	DoneChannelExample()
+	PipelineExample()
 }
