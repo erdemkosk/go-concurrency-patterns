@@ -34,6 +34,8 @@ Unbuffered Channels: These channels facilitate synchronous communication between
 Buffered Channels: These channels have a specific capacity and allow data to be sent up to that capacity. The sender can send data as long as the channel is not full, and the receiver doesn't need to wait for data until it's ready to receive. This provides more flexibility in data transfer and is suitable for situations that don't require strict synchronization. For example, ch := make(chan int, 5) creates a buffered channel that **can hold up to 5 data items**.
 
 #### The Done Channel
+Another example of using channels is done. In this approach, a very long goroutine **can be stopped**. Similar to go context logic, a long goroutine can be used as a **breaker at any time**.
+
 #### Pipeline
 
 
