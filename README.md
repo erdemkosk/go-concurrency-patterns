@@ -29,6 +29,10 @@ For instance, when waiting for data from the network or different threads of exe
 This feature allows programs to monitor and manage various tasks concurrently, preventing the program from blocking in unexpected situations. The use of select is highly beneficial in scenarios involving asynchronous operations or listening for data from various sources.
 
 #### Buffered vs Unbuffered Channels
+Unbuffered Channels: These channels facilitate synchronous communication between the sender and receiver. When the sender sends data, the receiver waits until it receives the data. This ensures **synchronization between the sender and receiver**, allowing for instantaneous data transfer. For instance, ch := make(chan int) creates an unbuffered channel.
+
+Buffered Channels: These channels have a specific capacity and allow data to be sent up to that capacity. The sender can send data as long as the channel is not full, and the receiver doesn't need to wait for data until it's ready to receive. This provides more flexibility in data transfer and is suitable for situations that don't require strict synchronization. For example, ch := make(chan int, 5) creates a buffered channel that **can hold up to 5 data items**.
+
 #### The Done Channel
 #### Pipeline
 
