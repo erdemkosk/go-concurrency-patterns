@@ -5,4 +5,5 @@ func main() {
 	SelectExample()
 	DoneChannelExample()
 	PipelineExample()
+	GeneratorExample()
 }

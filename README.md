@@ -47,6 +47,15 @@ Even in the presence of parallel processes, each stage receives input from the p
 
 Channels are used to manage the flow of data within this "pipeline" structure. Each stage uses channels to receive data, process it, and pass the results to the subsequent stage. This modular approach makes it easier to maintain and extend data processing operations.
 
+#### Generator and Timeout
+The Generator pattern **is a structure that repeats a specific task for a defined duration and stops when that duration elapses**. Here's a more generalized explanation:
+
+**Generator Pattern**: This pattern is used when there's a need to repeatedly perform a certain task for a specific duration. Usually, during this timeframe, data is generated, or a particular task is executed at regular intervals.
+
+**Timeout Mechanism**: The timeout mechanism serves the purpose of halting an operation after a predefined period. It's commonly employed in scenarios where there's a requirement to pause or reset a recurring task within specific time intervals.
+
+This pattern finds utility in various scenarios. For instance, it can be used for **intermittently executing a function that generates a certain amount of data**, completing a task within a specified time frame, or orchestrating operations using some form of timing mechanism.
+
 
 ## Articles and structures to be analyzed in the future
 
