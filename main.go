@@ -6,4 +6,5 @@ func main() {
 	DoneChannelExample()
 	PipelineExample()
 	GeneratorExample()
+	WorkerExample()
 }

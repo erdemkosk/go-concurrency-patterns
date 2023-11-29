@@ -56,6 +56,16 @@ The Generator pattern **is a structure that repeats a specific task for a define
 
 This pattern finds utility in various scenarios. For instance, it can be used for **intermittently executing a function that generates a certain amount of data**, completing a task within a specified time frame, or orchestrating operations using some form of timing mechanism.
 
+#### Worker Patern
+The Worker pattern is used for parallel and asynchronous task processing. It involves distributing a workload among multiple workers who handle tasks simultaneously and collect results.
+
+It's useful for:
+
+Parallel Processing: Handling large workloads faster by processing tasks simultaneously across multiple workers.
+
+Task Distribution: Assigning incoming tasks to multiple workers, allowing each worker to process its workload.
+
+Performance Improvement: Processing large datasets or intensive tasks in parallel often improves performance.
 
 ## Articles and structures to be analyzed in the future
 
